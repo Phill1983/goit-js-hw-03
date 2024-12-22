@@ -1,4 +1,4 @@
-function makeArray(firstArray, secondArray, maxLength) {
+function makeArray(firstArray = [], secondArray = [], maxLength = 0) {
     const newdArray = firstArray.concat(secondArray);
     if (newdArray.length > maxLength) {
         return newdArray.slice(0, maxLength);
@@ -12,3 +12,4 @@ console.log(makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3)); //
 console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2)); // ["Earth", "Jupiter"]
 console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4)); // ["Earth", "Jupiter", "Neptune", "Uranus"]
 console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0)); // []
+console.log(makeArray());
